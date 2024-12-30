@@ -1,5 +1,6 @@
 package com.example.HibernateTask.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -12,7 +13,8 @@ public class PersonInfo {
     @EmbeddedId
     private Person person;
     private String phone_number;
-    private String city_of_living;
+    @Column(name = "city_of_living")
+    private String cityOfLiving;
 
     public PersonInfo() {
     }
