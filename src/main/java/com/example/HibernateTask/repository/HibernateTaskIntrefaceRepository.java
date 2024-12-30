@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Repository
 public interface HibernateTaskIntrefaceRepository  extends JpaRepository<PersonInfo, Person> {
-    @Query("select u from PERSONS u where u.city_of_living = ?1")
+    @Query("select u from PERSONS u where u.cityOfLiving = ?1")
     List<PersonInfo> findByCityofliving(String city);
     @Query("select u from PERSONS u where u.person.age < ?1")
     List<PersonInfo> findByAge(int age);
